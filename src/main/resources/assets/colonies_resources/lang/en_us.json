@@ -1,0 +1,13 @@
+{
+  "itemGroup.colonies_resources": "Example Mod Tab",
+  "block.colonies_resources.example_block": "Example Block",
+  "item.colonies_resources.example_item": "Example Item",
+
+  "colonies_resources.configuration.title": "Colonies Resources Configs",
+  "colonies_resources.configuration.section.colonies_resources.common.toml": "Colonies Resources Configs",
+  "colonies_resources.configuration.section.colonies_resources.common.toml.title": "Colonies Resources Configs",
+  "colonies_resources.configuration.items": "Item List",
+  "colonies_resources.configuration.logDirtBlock": "Log Dirt Block",
+  "colonies_resources.configuration.magicNumberIntroduction": "Magic Number Text",
+  "colonies_resources.configuration.magicNumber": "Magic Number"
+}

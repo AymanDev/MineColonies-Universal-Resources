@@ -1,0 +1,20 @@
+{
+  "required": true,
+  "package": "com.aymandev.coloniesresources.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BlockPlacementResultMixin",
+    "BlockTagSubstitutionPlacementHandlerMixin",
+    "BuildingStructureHandlerMixin",
+    "DoBlockPlacementHandlerMixin",
+    "GeneralBlockPlacementHandlerMixin",
+    "GrassPlacementHandlerMixin",
+    "StructurePlacerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
