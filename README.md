@@ -1,6 +1,6 @@
 # MineColonies: Universal Resources
 
-MineColonies: Universal Resources is an addon for MineColonies that makes gathering construction materials much easire
+MineColonies: Universal Resources is an addon for MineColonies that makes gathering construction materials much easier
 and far less grindy.
 
 Instead of collecting and crafting hundreds of individual blocks, this mod introduces set of new resource items that

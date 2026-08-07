@@ -90,12 +90,12 @@ public class UniversalResourcesRecipeProvider extends RecipeProvider {
         .pattern("AAA")
         .pattern("ABA")
         .pattern("AAA")
-        .define('A', Items.GOLD_INGOT)
-        .define('B', Items.DIAMOND)
+        .define('A', Items.COPPER_INGOT)
+        .define('B', Items.GOLD_BLOCK)
         .unlockedBy(
             "has_gold_and_diamond",
             inventoryTrigger(
-                ItemPredicate.Builder.item().of(Items.GOLD_INGOT, Items.DIAMOND).build()))
+                ItemPredicate.Builder.item().of(Items.COPPER_INGOT, Items.GOLD_BLOCK).build()))
         .save(output);
   }
 }

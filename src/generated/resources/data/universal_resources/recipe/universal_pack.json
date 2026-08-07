@@ -3,10 +3,10 @@
   "category": "misc",
   "key": {
     "A": {
-      "item": "minecraft:gold_ingot"
+      "item": "minecraft:copper_ingot"
     },
     "B": {
-      "item": "minecraft:diamond"
+      "item": "minecraft:gold_block"
     }
   },
   "pattern": [
