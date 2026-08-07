@@ -125,10 +125,10 @@ dependencies {
     // CurseForge
     implementation "curse.maven:minecolonies-245506:8562588-sources-debof-api"
     implementation "curse.maven:structurize-298744:8398574-sources-debof-api"
-    implementation "curse.maven:domumornamentum-527361:8311478-sources-debof-api"
 
     // Local Runtime only
     localRuntime "curse.maven:blockui-522992:7790469-sources-debof-api"
+    localRuntime "curse.maven:domumornamentum-527361:8311478-sources-debof-api"
 
     // Modrinth
     localRuntime "maven.modrinth:AANobbMI:S3DUMfBo" // Sodium

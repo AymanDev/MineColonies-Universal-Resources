@@ -1,6 +1,5 @@
-package com.aymandev.coloniesresources;
+package com.aymandev.universalresources;
 
-import com.ldtteam.domumornamentum.entity.block.AbstractMateriallyTexturedBlockEntity;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -13,13 +12,11 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
-import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -27,9 +24,9 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.slf4j.Logger;
 
-@Mod(ColoniesResources.MODID)
-public class ColoniesResources {
-  public static final String MODID = "colonies_resources";
+@Mod(UniversalResources.MODID)
+public class UniversalResources {
+  public static final String MODID = "universal_resources";
   public static final Logger LOGGER = LogUtils.getLogger();
   public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
   public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
@@ -60,7 +57,7 @@ public class ColoniesResources {
           "example_tab",
           () ->
               CreativeModeTab.builder()
-                  .title(Component.translatable("itemGroup.colonies_resources"))
+                  .title(Component.translatable("itemGroup.universal_resources"))
                   .withTabsBefore(CreativeModeTabs.COMBAT)
                   .icon(() -> EXAMPLE_ITEM.get().getDefaultInstance())
                   .displayItems(
@@ -70,7 +67,7 @@ public class ColoniesResources {
                       })
                   .build());
 
-  public ColoniesResources(IEventBus modEventBus, ModContainer modContainer) {
+  public UniversalResources(IEventBus modEventBus, ModContainer modContainer) {
     modEventBus.addListener(this::commonSetup);
     modEventBus.addListener(this::onLoadComplete);
 
@@ -102,13 +99,5 @@ public class ColoniesResources {
 
   private void onLoadComplete(FMLLoadCompleteEvent event) {
     PlacementHandlerOverrider.init();
-  }
-
-  public static ItemStack convertToResource(BlockEntity blockEntity) {
-    if (!(blockEntity instanceof AbstractMateriallyTexturedBlockEntity)) {
-      return ItemStack.EMPTY;
-    }
-
-    return new ItemStack(ColoniesResources.WOOD.asItem(), 1);
   }
 }

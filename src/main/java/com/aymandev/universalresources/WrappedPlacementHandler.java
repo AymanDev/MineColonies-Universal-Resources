@@ -1,7 +1,7 @@
 /**
  * @author KingoSawada
  */
-package com.aymandev.coloniesresources;
+package com.aymandev.universalresources;
 
 import com.ldtteam.structurize.placement.IPlacementContext;
 import com.ldtteam.structurize.placement.handlers.placement.IPlacementHandler;
@@ -46,7 +46,7 @@ public class WrappedPlacementHandler implements IPlacementHandler {
       BlockState blockState,
       @Nullable CompoundTag compoundTag,
       @NotNull IPlacementContext iPlacementContext) {
-    return List.of(new ItemStack(ColoniesResources.WOOD.get(), 1));
+    return List.of(new ItemStack(UniversalResources.WOOD.get(), 1));
   }
 
   @Override

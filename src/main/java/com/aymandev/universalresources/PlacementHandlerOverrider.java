@@ -1,7 +1,7 @@
 /**
  * @author KingoSawada
  */
-package com.aymandev.coloniesresources;
+package com.aymandev.universalresources;
 
 import com.ldtteam.structurize.placement.handlers.placement.PlacementHandlers;
 import java.util.ArrayList;
