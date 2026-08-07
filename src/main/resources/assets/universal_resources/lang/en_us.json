@@ -1,13 +1,12 @@
 {
-  "itemGroup.universal_resources": "Example Mod Tab",
-  "block.universal_resources.example_block": "Example Block",
-  "item.universal_resources.example_item": "Example Item",
-
-  "universal_resources.configuration.title": "Colonies Resources Configs",
-  "universal_resources.configuration.section.universal_resources.common.toml": "Colonies Resources Configs",
-  "universal_resources.configuration.section.universal_resources.common.toml.title": "Colonies Resources Configs",
-  "universal_resources.configuration.items": "Item List",
-  "universal_resources.configuration.logDirtBlock": "Log Dirt Block",
-  "universal_resources.configuration.magicNumberIntroduction": "Magic Number Text",
-  "universal_resources.configuration.magicNumber": "Magic Number"
+  "itemGroup.universal_resources": "MineColonies: Universal Resources",
+  "item.universal_resources.wood_pile": "Wood Pile",
+  "item.universal_resources.stone_pile": "Stone Pile",
+  "item.universal_resources.iron_pile": "Iron Pile",
+  "item.universal_resources.rare_metals_pile": "Rare Metals Pile",
+  "item.universal_resources.tools_pack": "Tools Pack",
+  "universal_resources.configuration.title": "MineColonies: Universal Resources Configs",
+  "universal_resources.configuration.section.universal_resources.common.toml": "MineColonies: Universal Resources Configs",
+  "universal_resources.configuration.section.universal_resources.common.toml.title": "MineColonies: Universal Resources Configs",
+  "universal_resources.configuration.resourceSpendModifier": "Resource Count Modifier"
 }

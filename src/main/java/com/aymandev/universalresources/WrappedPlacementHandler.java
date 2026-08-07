@@ -1,6 +1,3 @@
-/**
- * @author KingoSawada
- */
 package com.aymandev.universalresources;
 
 import com.ldtteam.structurize.placement.IPlacementContext;
@@ -46,7 +43,10 @@ public class WrappedPlacementHandler implements IPlacementHandler {
       BlockState blockState,
       @Nullable CompoundTag compoundTag,
       @NotNull IPlacementContext iPlacementContext) {
-    return List.of(new ItemStack(UniversalResources.WOOD.get(), 1));
+    var stack = Converter.getItemForBlock(blockState);
+    stack.setCount(stack.getCount() * Config.RESOURCE_SPENT_MODIFIER.get());
+
+    return List.of(stack);
   }
 
   @Override

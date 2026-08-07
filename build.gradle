@@ -129,6 +129,7 @@ dependencies {
     // Local Runtime only
     localRuntime "curse.maven:blockui-522992:7790469-sources-debof-api"
     localRuntime "curse.maven:domumornamentum-527361:8311478-sources-debof-api"
+    localRuntime "curse.maven:worldedit-225608:5830452-debof"
 
     // Modrinth
     localRuntime "maven.modrinth:AANobbMI:S3DUMfBo" // Sodium

@@ -1,6 +1,5 @@
 package com.aymandev.universalresources;
 
-import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -18,8 +17,6 @@ public class UniversalResourcesClient {
     }
 
     @SubscribeEvent
-    static void onClientSetup(FMLClientSetupEvent event) {
-        UniversalResources.LOGGER.info("HELLO FROM CLIENT SETUP");
-        UniversalResources.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+    private static void onClientSetup(FMLClientSetupEvent event) {
     }
 }
