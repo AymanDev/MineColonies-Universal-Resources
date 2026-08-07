@@ -15,8 +15,12 @@ public class Converter {
   private static final Map<Item, List<? extends String>> ITEM_TO_TAG_LIST_MAP = new HashMap<>();
 
   static {
-    ITEM_TO_TAG_LIST_MAP.put(UniversalResourcesItems.WOOD_PILE.get(), Config.WOOD_ITEMS.get());
+    ITEM_TO_TAG_LIST_MAP.put(UniversalResourcesItems.TOOLS_PACK.get(), Config.TOOLS_ITEMS.get());
+    ITEM_TO_TAG_LIST_MAP.put(
+        UniversalResourcesItems.RARE_METAL_PILE.get(), Config.RARE_METAL_ITEMS.get());
+    ITEM_TO_TAG_LIST_MAP.put(UniversalResourcesItems.IRON_PILE.get(), Config.IRON_ITEMS.get());
     ITEM_TO_TAG_LIST_MAP.put(UniversalResourcesItems.STONE_PILE.get(), Config.STONE_ITEMS.get());
+    ITEM_TO_TAG_LIST_MAP.put(UniversalResourcesItems.WOOD_PILE.get(), Config.WOOD_ITEMS.get());
   }
 
   public static ItemStack getItemForBlock(BlockState blockState) {

@@ -5,8 +5,14 @@
   "item.universal_resources.iron_pile": "Iron Pile",
   "item.universal_resources.rare_metals_pile": "Rare Metals Pile",
   "item.universal_resources.tools_pack": "Tools Pack",
+  "item.universal_resources.universal_pack": "Universal Pack",
   "universal_resources.configuration.title": "MineColonies: Universal Resources Configs",
   "universal_resources.configuration.section.universal_resources.common.toml": "MineColonies: Universal Resources Configs",
   "universal_resources.configuration.section.universal_resources.common.toml.title": "MineColonies: Universal Resources Configs",
-  "universal_resources.configuration.resourceSpendModifier": "Resource Count Modifier"
+  "universal_resources.configuration.resourceSpendModifier": "Resource Count Modifier",
+  "universal_resources.configuration.woodItems": "Wood Resource Items",
+  "universal_resources.configuration.stoneItems": "Stone Resource Items",
+  "universal_resources.configuration.ironItems": "Iron Resource Items",
+  "universal_resources.configuration.rareMetalItems": "Rare Metal Resource Items",
+  "universal_resources.configuration.toolsItems": "Tools Resource Items"
 }

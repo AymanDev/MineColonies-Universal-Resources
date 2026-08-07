@@ -24,6 +24,10 @@ public class UniversalResourcesItems {
   }
 
   public static void addToCreative(BuildCreativeModeTabContentsEvent event) {
+    if (event.getTab() != UniversalResourcesTabs.UNIVERSAL_RESOURCES_TAB.get()) {
+      return;
+    }
+
     event.accept(WOOD_PILE);
     event.accept(STONE_PILE);
     event.accept(IRON_PILE);

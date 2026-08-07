@@ -31,6 +31,10 @@ public class UniversalResources {
   private void commonSetup(FMLCommonSetupEvent event) {}
 
   private void onLoadComplete(FMLLoadCompleteEvent event) {
+    if (!System.getProperty("neoforge.datagen", "").isEmpty()) {
+      return;
+    }
+
     PlacementHandlerOverrider.init();
   }
 }

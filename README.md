@@ -14,6 +14,10 @@ crafting endless possibilities of blocks and more time expanding your automatiza
 I never liked how you need to craft in all sort of different ways required blocks to build/upgrade buildings. It was too
 boring and grindy
 
+## Disclaimer
+
+Mod still early in development and probably unbalanced and buggy. Feel free to report any issue or request feature.
+
 ### P.S.
 
 I'm not new to modding Minecraft, but I'm new to modding newer version, so expect bugs and slow development in general

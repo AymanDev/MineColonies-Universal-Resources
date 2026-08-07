@@ -122,20 +122,28 @@ configurations {
 }
 
 dependencies {
-    // CurseForge
-    implementation "curse.maven:minecolonies-245506:8562588-sources-debof-api"
-    implementation "curse.maven:structurize-298744:8398574-sources-debof-api"
+    def isDataGen = gradle.startParameter.taskNames.any { it.contains("runData") }
 
-    // Local Runtime only
-    localRuntime "curse.maven:blockui-522992:7790469-sources-debof-api"
-    localRuntime "curse.maven:domumornamentum-527361:8311478-sources-debof-api"
-    localRuntime "curse.maven:worldedit-225608:5830452-debof"
+    compileOnly "curse.maven:minecolonies-245506:8562588-api"
+    compileOnly "curse.maven:structurize-298744:8398574-api"
 
-    // Modrinth
-    localRuntime "maven.modrinth:AANobbMI:S3DUMfBo" // Sodium
-    localRuntime "maven.modrinth:gvQqBUqZ:DDUrRVCA" // Lithium
-    localRuntime "maven.modrinth:NNAgCjsB:5zRIon6w" // Entity Culling
-    localRuntime "maven.modrinth:uXXizFIs:x7kQWVju" // FerriteCore
+    if (!isDataGen) {
+        // CurseForge
+        localRuntime "curse.maven:minecolonies-245506:8562588-debof"
+        localRuntime "curse.maven:structurize-298744:8398574-debof"
+
+
+        // Local Runtime only
+        localRuntime "curse.maven:blockui-522992:7790469-debof"
+        localRuntime "curse.maven:domumornamentum-527361:8311478-debof"
+        localRuntime "curse.maven:worldedit-225608:5830452-debof"
+
+        // Modrinth
+        localRuntime "maven.modrinth:AANobbMI:S3DUMfBo" // Sodium
+        localRuntime "maven.modrinth:gvQqBUqZ:DDUrRVCA" // Lithium
+        localRuntime "maven.modrinth:NNAgCjsB:5zRIon6w" // Entity Culling
+        localRuntime "maven.modrinth:uXXizFIs:x7kQWVju" // FerriteCore
+    }
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

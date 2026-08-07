@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:stone"
+    },
+    "C": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "CCC",
+    "AAA"
+  ],
+  "result": {
+    "count": 3,
+    "id": "universal_resources:stone_pile"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rare_metals": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_nugget",
+              "minecraft:copper_ingot",
+              "minecraft:gold_nugget"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "universal_resources:rare_metals_pile"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rare_metals"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "universal_resources:rare_metals_pile"
+    ]
+  }
+}
