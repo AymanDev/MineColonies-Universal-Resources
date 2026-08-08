@@ -1,14 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_stone_and_cobblestone": {
+    "has_logs": {
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:stone",
-              "minecraft:cobblestone"
-            ]
+            "items": "#minecraft:logs"
           }
         ]
       },
@@ -24,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_stone_and_cobblestone"
+      "has_logs"
     ]
   ],
   "rewards": {

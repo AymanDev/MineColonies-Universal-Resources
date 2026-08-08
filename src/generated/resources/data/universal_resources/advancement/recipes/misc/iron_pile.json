@@ -1,14 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_iron_ingot": {
+    "has_logs": {
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:iron_ingot",
-              "minecraft:iron_nugget"
-            ]
+            "items": "#minecraft:logs"
           }
         ]
       },
@@ -24,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_iron_ingot"
+      "has_logs"
     ]
   ],
   "rewards": {

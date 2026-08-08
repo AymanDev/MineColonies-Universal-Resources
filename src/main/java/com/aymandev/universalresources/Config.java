@@ -4,7 +4,9 @@ import java.util.List;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
 public class Config {
@@ -12,14 +14,14 @@ public class Config {
 
   public static final ModConfigSpec.IntValue RESOURCE_SPENT_MODIFIER =
       BUILDER
-          .comment("Modifier for how much resources are needed per block")
+          .comment("Modifier for how many resources are needed per block")
           .defineInRange("resourceSpendModifier", 1, 0, Integer.MAX_VALUE);
 
-  public static final ModConfigSpec.ConfigValue<List<? extends String>> WOOD_ITEMS =
+  public static final ModConfigSpec.ConfigValue<List<? extends String>> WOOD_BLOCKS =
       BUILDER
           .comment("Items or block tags that are will be as wood resources")
           .defineListAllowEmpty(
-              "woodItems",
+              "woodBlocks",
               List.of(
                   "#" + BlockTags.PLANKS.location(),
                   "#" + BlockTags.LOGS.location(),
@@ -35,17 +37,53 @@ public class Config {
                   "#" + BlockTags.WOODEN_STAIRS.location(),
                   "#" + BlockTags.WOODEN_TRAPDOORS.location(),
                   BuiltInRegistries.ITEM.getKey(Items.CRAFTING_TABLE).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.TORCH).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.REDSTONE_TORCH).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.SOUL_TORCH).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.WALL_TORCH).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.REDSTONE_WALL_TORCH).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.SOUL_WALL_TORCH).toString(),
                   BuiltInRegistries.ITEM.getKey(Items.CHEST).toString(),
                   BuiltInRegistries.ITEM.getKey(Items.BARREL).toString(),
                   BuiltInRegistries.ITEM.getKey(Items.CRAFTER).toString()),
               () -> "",
               Config::validateItemName);
 
-  public static final ModConfigSpec.ConfigValue<List<? extends String>> STONE_ITEMS =
+  public static final ModConfigSpec.ConfigValue<List<? extends String>> WOOD_ITEMS =
       BUILDER
-          .comment("Items or block tags that are will be as stone resources")
+          .comment("Items or block tags that are be as wood resources")
           .defineListAllowEmpty(
-              "stoneItems",
+              "woodItems",
+              List.of(
+                  "#" + ItemTags.PLANKS.location(),
+                  "#" + ItemTags.LOGS.location(),
+                  "#" + ItemTags.WOODEN_BUTTONS.location(),
+                  "#" + ItemTags.HANGING_SIGNS.location(),
+                  "#" + ItemTags.SIGNS.location(),
+                  "#" + ItemTags.BAMBOO_BLOCKS.location(),
+                  "#" + ItemTags.WOODEN_BUTTONS.location(),
+                  "#" + ItemTags.WOODEN_DOORS.location(),
+                  "#" + ItemTags.WOODEN_FENCES.location(),
+                  "#" + ItemTags.WOODEN_PRESSURE_PLATES.location(),
+                  "#" + ItemTags.WOODEN_SLABS.location(),
+                  "#" + ItemTags.WOODEN_STAIRS.location(),
+                  "#" + ItemTags.WOODEN_TRAPDOORS.location(),
+                  BuiltInRegistries.ITEM.getKey(Items.CRAFTING_TABLE).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.CHEST).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.BARREL).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.TORCH).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.SOUL_TORCH).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.REDSTONE_TORCH).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.STICK).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.CRAFTER).toString()),
+              () -> "",
+              Config::validateItemName);
+
+  public static final ModConfigSpec.ConfigValue<List<? extends String>> STONE_BLOCKS =
+      BUILDER
+          .comment("Items or block tags that are be as stone resources")
+          .defineListAllowEmpty(
+              "stoneBlocks",
               List.of(
                   "#" + BlockTags.BASE_STONE_OVERWORLD.location(),
                   "#" + BlockTags.STONE_BRICKS.location(),
@@ -63,11 +101,41 @@ public class Config {
               () -> "",
               Config::validateItemName);
 
-  public static final ModConfigSpec.ConfigValue<List<? extends String>> IRON_ITEMS =
+  public static final ModConfigSpec.ConfigValue<List<? extends String>> STONE_ITEMS =
       BUILDER
-          .comment("Items or block tags that are will be as iron resources")
+          .comment("Items or block tags that are be as stone resources")
           .defineListAllowEmpty(
-              "ironItems",
+              "stoneBlocks",
+              List.of(
+                  "#" + ItemTags.STONE_BRICKS.location(),
+                  "#" + ItemTags.STONE_BUTTONS.location(),
+                  "#" + ItemTags.SLABS.location(),
+                  "#" + ItemTags.STAIRS.location(),
+                  "#" + ItemTags.COAL_ORES.location(),
+                  "#" + ItemTags.SMELTS_TO_GLASS.location(),
+                  "#" + ItemTags.DIRT.location(),
+                  "#" + ItemTags.SAND.location(),
+                  "#" + ItemTags.STAIRS.location(),
+                  BuiltInRegistries.ITEM.getKey(Items.FURNACE).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.STONE).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.INFESTED_COBBLESTONE).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.COBBLESTONE).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.COBBLESTONE_SLAB).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.COBBLESTONE_STAIRS).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.COBBLESTONE_WALL).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.MOSSY_COBBLESTONE).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.MOSSY_COBBLESTONE_WALL).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.MOSSY_COBBLESTONE_SLAB).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.MOSSY_COBBLESTONE_STAIRS).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.COBBLESTONE).toString()),
+              () -> "",
+              Config::validateItemName);
+
+  public static final ModConfigSpec.ConfigValue<List<? extends String>> IRON_BLOCKS =
+      BUILDER
+          .comment("Items or block tags that are be as iron resources")
+          .defineListAllowEmpty(
+              "ironBlocks",
               List.of(
                   "#" + BlockTags.IRON_ORES.location(),
                   BuiltInRegistries.ITEM.getKey(Items.IRON_BLOCK).toString(),
@@ -80,9 +148,42 @@ public class Config {
               () -> "",
               Config::validateItemName);
 
+  public static final ModConfigSpec.ConfigValue<List<? extends String>> IRON_ITEMS =
+      BUILDER
+          .comment("Items or block tags that are be as iron resources")
+          .defineListAllowEmpty(
+              "ironItems",
+              List.of(
+                  "#" + ItemTags.IRON_ORES.location(),
+                  BuiltInRegistries.ITEM.getKey(Items.IRON_BLOCK).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.CHAIN).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.RAW_IRON).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.IRON_TRAPDOOR).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.IRON_BARS).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.IRON_DOOR).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.HEAVY_WEIGHTED_PRESSURE_PLATE).toString()),
+              () -> "",
+              Config::validateItemName);
+
+  public static final ModConfigSpec.ConfigValue<List<? extends String>> RARE_METAL_BLOCKS =
+      BUILDER
+          .comment("Items or block tags that are be as rare metals resources")
+          .defineListAllowEmpty(
+              "rareMetalItems",
+              List.of(
+                  BuiltInRegistries.ITEM.getKey(Items.LIGHT_WEIGHTED_PRESSURE_PLATE).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.GOLD_BLOCK).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.GOLD_ORE).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.RAW_GOLD).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.DEEPSLATE_GOLD_ORE).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.NETHER_GOLD_ORE).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.RAW_GOLD_BLOCK).toString()),
+              () -> "",
+              Config::validateItemName);
+
   public static final ModConfigSpec.ConfigValue<List<? extends String>> RARE_METAL_ITEMS =
       BUILDER
-          .comment("Items or block tags that are will be as rare metals resources")
+          .comment("Items or block tags that are be as rare metals resources")
           .defineListAllowEmpty(
               "rareMetalItems",
               List.of(
@@ -98,7 +199,7 @@ public class Config {
 
   public static final ModConfigSpec.ConfigValue<List<? extends String>> TOOLS_ITEMS =
       BUILDER
-          .comment("Items or block tags that are will be as tools resources")
+          .comment("Items or block tags that are be as tools resources")
           .defineListAllowEmpty("toolsItems", List.of(), () -> "", Config::validateItemName);
 
   static final ModConfigSpec SPEC = BUILDER.build();
@@ -120,6 +221,10 @@ public class Config {
       return false;
     }
 
-    return BuiltInRegistries.BLOCK.containsKey(id);
+    if (BuiltInRegistries.BLOCK.containsKey(id)) {
+      return true;
+    }
+
+    return BuiltInRegistries.ITEM.containsKey(id);
   }
 }

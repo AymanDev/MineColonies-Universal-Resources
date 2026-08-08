@@ -1,15 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_rare_metals": {
+    "has_logs": {
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:iron_nugget",
-              "minecraft:copper_ingot",
-              "minecraft:gold_nugget"
-            ]
+            "items": "#minecraft:logs"
           }
         ]
       },
@@ -25,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_rare_metals"
+      "has_logs"
     ]
   ],
   "rewards": {

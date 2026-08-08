@@ -3,10 +3,10 @@
   "category": "misc",
   "key": {
     "A": {
-      "item": "minecraft:copper_ingot"
+      "tag": "minecraft:logs"
     },
     "B": {
-      "item": "minecraft:gold_block"
+      "item": "minecraft:iron_ingot"
     }
   },
   "pattern": [

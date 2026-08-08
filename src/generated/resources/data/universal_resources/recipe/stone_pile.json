@@ -3,15 +3,15 @@
   "category": "misc",
   "key": {
     "A": {
-      "item": "minecraft:stone"
+      "tag": "minecraft:logs"
     },
-    "C": {
-      "item": "minecraft:cobblestone"
+    "B": {
+      "item": "minecraft:stone"
     }
   },
   "pattern": [
     "AAA",
-    "CCC",
+    "ABA",
     "AAA"
   ],
   "result": {

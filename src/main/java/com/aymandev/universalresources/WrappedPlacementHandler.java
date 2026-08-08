@@ -43,7 +43,7 @@ public class WrappedPlacementHandler implements IPlacementHandler {
       BlockState blockState,
       @Nullable CompoundTag compoundTag,
       @NotNull IPlacementContext iPlacementContext) {
-    var stack = Converter.getItemForBlock(blockState);
+    var stack = Converter.getItemForBlock(level, blockState);
     stack.setCount(stack.getCount() * Config.RESOURCE_SPENT_MODIFIER.get());
 
     return List.of(stack);

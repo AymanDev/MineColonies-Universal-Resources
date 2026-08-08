@@ -3,25 +3,19 @@
   "category": "misc",
   "key": {
     "A": {
-      "item": "minecraft:iron_nugget"
+      "tag": "minecraft:logs"
     },
     "B": {
-      "item": "minecraft:copper_ingot"
-    },
-    "C": {
-      "item": "minecraft:gold_nugget"
-    },
-    "D": {
-      "item": "minecraft:gold_block"
+      "item": "minecraft:gold_ingot"
     }
   },
   "pattern": [
     "AAA",
-    "BDB",
-    "CCC"
+    "ABA",
+    "AAA"
   ],
   "result": {
-    "count": 1,
+    "count": 3,
     "id": "universal_resources:rare_metals_pile"
   }
 }
