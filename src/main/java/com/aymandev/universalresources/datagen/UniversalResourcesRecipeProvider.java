@@ -20,7 +20,7 @@ public class UniversalResourcesRecipeProvider extends RecipeProvider {
 
   @Override
   protected void buildRecipes(@NotNull RecipeOutput output) {
-    ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UniversalResourcesItems.WOOD_PILE.get(), 3)
+    ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UniversalResourcesItems.WOOD_PILE.get(), 8)
         .pattern("AAA")
         .pattern("ABA")
         .pattern("AAA")
@@ -29,7 +29,7 @@ public class UniversalResourcesRecipeProvider extends RecipeProvider {
         .unlockedBy("has_logs", has(ItemTags.LOGS))
         .save(output);
 
-    ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UniversalResourcesItems.STONE_PILE.get(), 3)
+    ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UniversalResourcesItems.STONE_PILE.get(), 8)
         .pattern("AAA")
         .pattern("ABA")
         .pattern("AAA")

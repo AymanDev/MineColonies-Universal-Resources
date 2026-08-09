@@ -126,6 +126,7 @@ dependencies {
 
     compileOnly "curse.maven:minecolonies-245506:8562588-api"
     compileOnly "curse.maven:structurize-298744:8398574-api"
+    compileOnly "curse.maven:domumornamentum-527361:8311478-api"
 
     if (!isDataGen) {
         // CurseForge
@@ -137,6 +138,8 @@ dependencies {
         localRuntime "curse.maven:blockui-522992:7790469-debof"
         localRuntime "curse.maven:domumornamentum-527361:8311478-debof"
         localRuntime "curse.maven:worldedit-225608:5830452-debof"
+        localRuntime "curse.maven:stylecolonies-827507:8422813-debof"
+        localRuntime "curse.maven:byzantine-974855:8111937-debof"
 
         // Modrinth
         localRuntime "maven.modrinth:AANobbMI:S3DUMfBo" // Sodium

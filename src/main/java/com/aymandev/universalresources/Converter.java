@@ -1,5 +1,7 @@
 package com.aymandev.universalresources;
 
+import com.ldtteam.domumornamentum.block.IMateriallyTexturedBlock;
+import com.ldtteam.domumornamentum.recipe.architectscutter.ArchitectsCutterRecipe;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -7,10 +9,10 @@ import java.util.Map;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.CraftingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -140,16 +142,16 @@ public class Converter {
     for (var holder : level.getRecipeManager().getRecipes()) {
       var recipe = holder.value();
 
-      if (!(recipe instanceof CraftingRecipe craft)) {
-        continue;
-      }
-
-      var result = craft.getResultItem(level.registryAccess());
+      var result = recipe.getResultItem(level.registryAccess());
       if (!result.is(item)) {
         continue;
       }
 
-      for (var ingredient : craft.getIngredients()) {
+      if (recipe instanceof ArchitectsCutterRecipe cutterRecipe) {
+        return architectsCutterContainsIngredient(cutterRecipe, requiredIngredient);
+      }
+
+      for (var ingredient : recipe.getIngredients()) {
         if (containsIngredient(ingredient, requiredIngredient)) {
           return true;
         }
@@ -164,6 +166,31 @@ public class Converter {
     for (var stack : recipeIngredient.getItems()) {
       if (requiredIngredient.test(stack)) {
         return true;
+      }
+    }
+
+    return false;
+  }
+
+  private static boolean architectsCutterContainsIngredient(
+      ArchitectsCutterRecipe recipe, Ingredient requiredIngredient) {
+    var output = recipe.getBlock();
+
+    if (!(output instanceof IMateriallyTexturedBlock textured)) {
+      return false;
+    }
+
+    for (var component : textured.getComponents()) {
+      var validSkins = component.getValidSkins();
+
+      for (var stack : requiredIngredient.getItems()) {
+        if (!(stack.getItem() instanceof BlockItem item)) {
+          continue;
+        }
+
+        if (item.getBlock().defaultBlockState().is(validSkins)) {
+          return true;
+        }
       }
     }
 

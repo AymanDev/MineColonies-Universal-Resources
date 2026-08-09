@@ -97,7 +97,25 @@ public class Config {
                   "#" + BlockTags.SAND.location(),
                   "#" + BlockTags.STAIRS.location(),
                   BuiltInRegistries.ITEM.getKey(Items.FURNACE).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.STONE_STAIRS).toString()),
+                  BuiltInRegistries.ITEM.getKey(Items.GRASS_BLOCK).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.SHORT_GRASS).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.TALL_GRASS).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.SEAGRASS).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.DIRT_PATH).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.ANDESITE).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.POLISHED_ANDESITE).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.FURNACE).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.STONE_STAIRS).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.STONE).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.INFESTED_COBBLESTONE).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.COBBLESTONE).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.COBBLESTONE_SLAB).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.COBBLESTONE_STAIRS).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.COBBLESTONE_WALL).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.MOSSY_COBBLESTONE).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.MOSSY_COBBLESTONE_WALL).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.MOSSY_COBBLESTONE_SLAB).toString(),
+                  BuiltInRegistries.ITEM.getKey(Items.MOSSY_COBBLESTONE_STAIRS).toString()),
               () -> "",
               Config::validateItemName);
 
@@ -105,7 +123,7 @@ public class Config {
       BUILDER
           .comment("Items or block tags that are be as stone resources")
           .defineListAllowEmpty(
-              "stoneBlocks",
+              "stoneItems",
               List.of(
                   "#" + ItemTags.STONE_BRICKS.location(),
                   "#" + ItemTags.STONE_BUTTONS.location(),
@@ -126,8 +144,7 @@ public class Config {
                   BuiltInRegistries.ITEM.getKey(Items.MOSSY_COBBLESTONE).toString(),
                   BuiltInRegistries.ITEM.getKey(Items.MOSSY_COBBLESTONE_WALL).toString(),
                   BuiltInRegistries.ITEM.getKey(Items.MOSSY_COBBLESTONE_SLAB).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.MOSSY_COBBLESTONE_STAIRS).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.COBBLESTONE).toString()),
+                  BuiltInRegistries.ITEM.getKey(Items.MOSSY_COBBLESTONE_STAIRS).toString()),
               () -> "",
               Config::validateItemName);
 
@@ -169,7 +186,7 @@ public class Config {
       BUILDER
           .comment("Items or block tags that are be as rare metals resources")
           .defineListAllowEmpty(
-              "rareMetalItems",
+              "rareMetalBlocks",
               List.of(
                   BuiltInRegistries.ITEM.getKey(Items.LIGHT_WEIGHTED_PRESSURE_PLATE).toString(),
                   BuiltInRegistries.ITEM.getKey(Items.GOLD_BLOCK).toString(),

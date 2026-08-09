@@ -1,8 +1,9 @@
 {
   "required": true,
-  "package": "com.aymandev.coloniesresources.mixin",
+  "package": "com.aymandev.universalresources.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "PlacementHandlersMixin"
   ],
   "injectors": {
     "defaultRequire": 1
