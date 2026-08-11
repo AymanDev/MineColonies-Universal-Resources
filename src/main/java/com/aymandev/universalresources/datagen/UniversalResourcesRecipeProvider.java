@@ -1,5 +1,6 @@
 package com.aymandev.universalresources.datagen;
 
+import com.aymandev.universalresources.UniversalResources;
 import com.aymandev.universalresources.UniversalResourcesItems;
 import java.util.concurrent.CompletableFuture;
 import net.minecraft.core.HolderLookup;
@@ -8,6 +9,7 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import org.jetbrains.annotations.NotNull;
@@ -29,6 +31,17 @@ public class UniversalResourcesRecipeProvider extends RecipeProvider {
         .unlockedBy("has_logs", has(ItemTags.LOGS))
         .save(output);
 
+    ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UniversalResourcesItems.WOOD_PILE.get(), 16)
+        .pattern("AAA")
+        .pattern("ABA")
+        .pattern("AAA")
+        .define('A', Items.DEEPSLATE)
+        .define('B', ItemTags.PLANKS)
+        .unlockedBy("has_logs", has(ItemTags.LOGS))
+        .save(
+            output,
+            ResourceLocation.fromNamespaceAndPath(UniversalResources.MODID, "wood_pile_x16"));
+
     ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UniversalResourcesItems.STONE_PILE.get(), 8)
         .pattern("AAA")
         .pattern("ABA")
@@ -38,7 +51,18 @@ public class UniversalResourcesRecipeProvider extends RecipeProvider {
         .unlockedBy("has_logs", has(ItemTags.LOGS))
         .save(output);
 
-    ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UniversalResourcesItems.IRON_PILE.get(), 3)
+    ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UniversalResourcesItems.STONE_PILE.get(), 16)
+        .pattern("AAA")
+        .pattern("ABA")
+        .pattern("AAA")
+        .define('A', Items.DEEPSLATE)
+        .define('B', Items.STONE)
+        .unlockedBy("has_logs", has(ItemTags.LOGS))
+        .save(
+            output,
+            ResourceLocation.fromNamespaceAndPath(UniversalResources.MODID, "stone_pile_x16"));
+
+    ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UniversalResourcesItems.IRON_PILE.get(), 8)
         .pattern("AAA")
         .pattern("ABA")
         .pattern("AAA")
@@ -48,7 +72,7 @@ public class UniversalResourcesRecipeProvider extends RecipeProvider {
         .save(output);
 
     ShapedRecipeBuilder.shaped(
-            RecipeCategory.MISC, UniversalResourcesItems.RARE_METAL_PILE.get(), 3)
+            RecipeCategory.MISC, UniversalResourcesItems.RARE_METAL_PILE.get(), 8)
         .pattern("AAA")
         .pattern("ABA")
         .pattern("AAA")
@@ -57,7 +81,7 @@ public class UniversalResourcesRecipeProvider extends RecipeProvider {
         .unlockedBy("has_logs", has(ItemTags.LOGS))
         .save(output);
 
-    ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UniversalResourcesItems.TOOLS_PACK.get(), 3)
+    ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UniversalResourcesItems.TOOLS_PACK.get(), 8)
         .pattern("AAA")
         .pattern("ABA")
         .pattern("AAA")
@@ -74,5 +98,17 @@ public class UniversalResourcesRecipeProvider extends RecipeProvider {
         .define('B', Items.IRON_INGOT)
         .unlockedBy("has_logs", has(ItemTags.LOGS))
         .save(output);
+
+    ShapedRecipeBuilder.shaped(
+            RecipeCategory.MISC, UniversalResourcesItems.UNIVERSAL_PACK.get(), 16)
+        .pattern("AAA")
+        .pattern("ABA")
+        .pattern("AAA")
+        .define('A', ItemTags.LOGS)
+        .define('B', Items.IRON_BLOCK)
+        .unlockedBy("has_logs", has(ItemTags.LOGS))
+        .save(
+            output,
+            ResourceLocation.fromNamespaceAndPath(UniversalResources.MODID, "universal_pack_x16"));
   }
 }

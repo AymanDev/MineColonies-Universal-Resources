@@ -6,7 +6,7 @@
       "tag": "minecraft:logs"
     },
     "B": {
-      "item": "minecraft:iron_nugget"
+      "item": "minecraft:iron_block"
     }
   },
   "pattern": [
@@ -15,7 +15,7 @@
     "AAA"
   ],
   "result": {
-    "count": 8,
-    "id": "universal_resources:tools_pack"
+    "count": 16,
+    "id": "universal_resources:universal_pack"
   }
 }

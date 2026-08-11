@@ -3,10 +3,10 @@
   "category": "misc",
   "key": {
     "A": {
-      "tag": "minecraft:logs"
+      "item": "minecraft:deepslate"
     },
     "B": {
-      "item": "minecraft:iron_nugget"
+      "tag": "minecraft:planks"
     }
   },
   "pattern": [
@@ -15,7 +15,7 @@
     "AAA"
   ],
   "result": {
-    "count": 8,
-    "id": "universal_resources:tools_pack"
+    "count": 16,
+    "id": "universal_resources:wood_pile"
   }
 }

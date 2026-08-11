@@ -36,16 +36,16 @@ public class Config {
                   "#" + BlockTags.WOODEN_SLABS.location(),
                   "#" + BlockTags.WOODEN_STAIRS.location(),
                   "#" + BlockTags.WOODEN_TRAPDOORS.location(),
-                  BuiltInRegistries.ITEM.getKey(Items.CRAFTING_TABLE).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.TORCH).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.REDSTONE_TORCH).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.SOUL_TORCH).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.CRAFTING_TABLE).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.TORCH).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.REDSTONE_TORCH).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.SOUL_TORCH).toString(),
                   BuiltInRegistries.BLOCK.getKey(Blocks.WALL_TORCH).toString(),
                   BuiltInRegistries.BLOCK.getKey(Blocks.REDSTONE_WALL_TORCH).toString(),
                   BuiltInRegistries.BLOCK.getKey(Blocks.SOUL_WALL_TORCH).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.CHEST).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.BARREL).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.CRAFTER).toString()),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.CHEST).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.BARREL).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.CRAFTER).toString()),
               () -> "",
               Config::validateItemName);
 
@@ -93,29 +93,22 @@ public class Config {
                   "#" + BlockTags.BASE_STONE_NETHER.location(),
                   "#" + BlockTags.DEEPSLATE_ORE_REPLACEABLES.location(),
                   "#" + BlockTags.SMELTS_TO_GLASS.location(),
-                  "#" + BlockTags.DIRT.location(),
-                  "#" + BlockTags.SAND.location(),
                   "#" + BlockTags.STAIRS.location(),
-                  BuiltInRegistries.ITEM.getKey(Items.FURNACE).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.GRASS_BLOCK).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.SHORT_GRASS).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.TALL_GRASS).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.SEAGRASS).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.DIRT_PATH).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.ANDESITE).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.POLISHED_ANDESITE).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.FURNACE).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.STONE_STAIRS).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.STONE).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.INFESTED_COBBLESTONE).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.COBBLESTONE).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.COBBLESTONE_SLAB).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.COBBLESTONE_STAIRS).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.COBBLESTONE_WALL).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.MOSSY_COBBLESTONE).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.MOSSY_COBBLESTONE_WALL).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.MOSSY_COBBLESTONE_SLAB).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.MOSSY_COBBLESTONE_STAIRS).toString()),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.FURNACE).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.ANDESITE).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.POLISHED_ANDESITE).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.FURNACE).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.STONE_STAIRS).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.STONE).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.INFESTED_COBBLESTONE).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.COBBLESTONE).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.COBBLESTONE_SLAB).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.COBBLESTONE_STAIRS).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.COBBLESTONE_WALL).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.MOSSY_COBBLESTONE).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.MOSSY_COBBLESTONE_WALL).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.MOSSY_COBBLESTONE_SLAB).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.MOSSY_COBBLESTONE_STAIRS).toString()),
               () -> "",
               Config::validateItemName);
 
@@ -155,13 +148,12 @@ public class Config {
               "ironBlocks",
               List.of(
                   "#" + BlockTags.IRON_ORES.location(),
-                  BuiltInRegistries.ITEM.getKey(Items.IRON_BLOCK).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.CHAIN).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.RAW_IRON).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.IRON_TRAPDOOR).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.IRON_BARS).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.IRON_DOOR).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.HEAVY_WEIGHTED_PRESSURE_PLATE).toString()),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.IRON_BLOCK).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.CHAIN).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.IRON_TRAPDOOR).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.IRON_BARS).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.IRON_DOOR).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE).toString()),
               () -> "",
               Config::validateItemName);
 
@@ -188,13 +180,12 @@ public class Config {
           .defineListAllowEmpty(
               "rareMetalBlocks",
               List.of(
-                  BuiltInRegistries.ITEM.getKey(Items.LIGHT_WEIGHTED_PRESSURE_PLATE).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.GOLD_BLOCK).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.GOLD_ORE).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.RAW_GOLD).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.DEEPSLATE_GOLD_ORE).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.NETHER_GOLD_ORE).toString(),
-                  BuiltInRegistries.ITEM.getKey(Items.RAW_GOLD_BLOCK).toString()),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.LIGHT_WEIGHTED_PRESSURE_PLATE).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.GOLD_BLOCK).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.GOLD_ORE).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.DEEPSLATE_GOLD_ORE).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.NETHER_GOLD_ORE).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.RAW_GOLD_BLOCK).toString()),
               () -> "",
               Config::validateItemName);
 
@@ -218,6 +209,26 @@ public class Config {
       BUILDER
           .comment("Items or block tags that are be as tools resources")
           .defineListAllowEmpty("toolsItems", List.of(), () -> "", Config::validateItemName);
+
+  public static final ModConfigSpec.ConfigValue<List<? extends String>> FREE_BLOCKS =
+      BUILDER
+          .comment("Items or block tags that are be as tools resources")
+          .defineListAllowEmpty(
+              "freeBlocks",
+              List.of(
+                  "#" + BlockTags.DIRT.location(),
+                  "#" + BlockTags.SAND.location(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.DIRT).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.SAND).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.DIRT_PATH).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.GRASS_BLOCK).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.SHORT_GRASS).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.TALL_GRASS).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.SEAGRASS).toString(),
+                  "structurize:blockSolidSubstitution".toLowerCase(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.TALL_SEAGRASS).toString()),
+              () -> "",
+              Config::validateItemName);
 
   static final ModConfigSpec SPEC = BUILDER.build();
 

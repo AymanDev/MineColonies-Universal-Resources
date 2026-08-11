@@ -32,7 +32,7 @@ public class Converter {
   }
 
   public static ItemStack getItemForBlock(Level level, BlockState blockState) {
-    if (blockState.isAir()) {
+    if (blockState.isAir() || isFree(blockState)) {
       return new ItemStack(Items.AIR);
     }
 
@@ -81,6 +81,20 @@ public class Converter {
     return new ItemStack(UniversalResourcesItems.UNIVERSAL_PACK.get(), 1);
   }
 
+  private static boolean isFree(BlockState blockState) {
+    if (Config.FREE_BLOCKS.get().isEmpty()) {
+      return false;
+    }
+
+    for (var str : Config.FREE_BLOCKS.get()) {
+      if (matches(blockState, str)) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
   private static ItemStack tryToGetItemStackForCategory(
       Item itemForCategory, List<? extends String> tagList, BlockState blockState) {
 
@@ -89,11 +103,9 @@ public class Converter {
     }
 
     for (var str : tagList) {
-      if (!matches(blockState, str)) {
-        continue;
+      if (matches(blockState, str)) {
+        return new ItemStack(itemForCategory, 1);
       }
-
-      return new ItemStack(itemForCategory, 1);
     }
 
     return null;
