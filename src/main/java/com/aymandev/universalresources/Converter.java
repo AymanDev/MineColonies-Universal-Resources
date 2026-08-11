@@ -33,7 +33,7 @@ public class Converter {
 
   public static ItemStack getItemForBlock(Level level, BlockState blockState) {
     if (blockState.isAir() || isFree(blockState)) {
-      return new ItemStack(Items.AIR);
+      return null;
     }
 
     for (var entry : ITEM_TO_TAG_LIST_MAP.entrySet()) {

@@ -225,6 +225,7 @@ public class Config {
                   BuiltInRegistries.BLOCK.getKey(Blocks.SHORT_GRASS).toString(),
                   BuiltInRegistries.BLOCK.getKey(Blocks.TALL_GRASS).toString(),
                   BuiltInRegistries.BLOCK.getKey(Blocks.SEAGRASS).toString(),
+                  BuiltInRegistries.BLOCK.getKey(Blocks.WATER).toString(),
                   "structurize:blockSolidSubstitution".toLowerCase(),
                   BuiltInRegistries.BLOCK.getKey(Blocks.TALL_SEAGRASS).toString()),
               () -> "",

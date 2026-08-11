@@ -93,7 +93,7 @@ modId = "minecolonies"
 type = "required"
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
 versionRange = "[1.1.1368-1.21.1, )"
-ordering = "AFTER"
+ordering = "BEFORE"
 side = "BOTH"
 
 [[dependencies.${ mod_id }]]
@@ -101,7 +101,7 @@ modId = "structurize"
 type = "required"
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
 versionRange = "[1.0.832-1.21.1-snapshot, )"
-ordering = "AFTER"
+ordering = "BEFORE"
 side = "BOTH"
 
 [[dependencies.${ mod_id }]]
@@ -109,7 +109,7 @@ modId = "domum_ornamentum"
 type = "required"
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
 versionRange = "[1.0.223-snapshot, )"
-ordering = "AFTER"
+ordering = "BEFORE"
 side = "BOTH"
 
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares
