@@ -227,6 +227,9 @@ public class Config {
                   BuiltInRegistries.BLOCK.getKey(Blocks.SEAGRASS).toString(),
                   BuiltInRegistries.BLOCK.getKey(Blocks.WATER).toString(),
                   "structurize:blockSolidSubstitution".toLowerCase(),
+                  "structurize:blockFluidSubstitution".toLowerCase(),
+                  "structurize:blockSubstitution".toLowerCase(),
+                  "#structurize:blockTagSubstitution".toLowerCase(),
                   BuiltInRegistries.BLOCK.getKey(Blocks.TALL_SEAGRASS).toString()),
               () -> "",
               Config::validateItemName);

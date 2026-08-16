@@ -127,37 +127,20 @@ configurations {
 }
 
 dependencies {
-    def isDataGen = gradle.startParameter.taskNames.any { it.contains("runData") }
-
     compileOnly "curse.maven:minecolonies-245506:8562588-api"
-    compileOnly "curse.maven:structurize-298744:8398574-api"
-    compileOnly "curse.maven:domumornamentum-527361:8311478-api"
+    compileOnly "curse.maven:structurize-298744:8610535-api"
+    compileOnly "curse.maven:domumornamentum-527361:7789217-api"
 
     localRuntime "curse.maven:minecolonies-245506:8562588-universal"
-    localRuntime "curse.maven:structurize-298744:8398574-universal"
-    localRuntime "curse.maven:domumornamentum-527361:8311478-universal"
-    localRuntime "curse.maven:blockui-522992:7790469-universal"
-    localRuntime "curse.maven:blockui-522992:7790469-universal"
+    localRuntime "curse.maven:structurize-298744:8610535-universal"
+    localRuntime "curse.maven:domumornamentum-527361:7789217-universal"
+    localRuntime "curse.maven:blockui-522992:7541336-universal"
     localRuntime(("com.ldtteam:datagenerators:1.19.3-0.1.54-ALPHA:universal")) {
         transitive = false
     }
 
-    if (!isDataGen) {
-        // CurseForge
-
-
-        // Local Runtime only
-        localRuntime "curse.maven:domumornamentum-527361:8311478-debof"
-        localRuntime "curse.maven:worldedit-225608:5830452-debof"
-        localRuntime "curse.maven:stylecolonies-827507:8422813-debof"
-        localRuntime "curse.maven:byzantine-974855:8111937-debof"
-
-        // Modrinth
-        localRuntime "maven.modrinth:AANobbMI:S3DUMfBo" // Sodium
-        localRuntime "maven.modrinth:gvQqBUqZ:DDUrRVCA" // Lithium
-        localRuntime "maven.modrinth:NNAgCjsB:5zRIon6w" // Entity Culling
-        localRuntime "maven.modrinth:uXXizFIs:x7kQWVju" // FerriteCore
-    }
+    localRuntime "curse.maven:byzantine-974855:8111937-universal"
+    localRuntime "curse.maven:stylecolonies-827507:8422813-universal"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
