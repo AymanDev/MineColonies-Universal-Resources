@@ -11,7 +11,7 @@ public class PlacementHandlerOverrider {
     var handlers = new ArrayList<>(PlacementHandlers.handlers);
 
     for (var handler : handlers) {
-      PlacementHandlers.add(new WrappedPlacementHandler(handler), handler.getClass());
+      PlacementHandlers.add(new WrappedPlacementHandler(handler));
     }
   }
 }
